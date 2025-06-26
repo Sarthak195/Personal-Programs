@@ -1,0 +1,22 @@
+;Program to arrange data in descending order
+;Sarthak Jain/ EN23CS301931
+;DESCENDING ORDER
+LXI H, 00
+MOV C,M
+DCR C
+REPEAT: MOV D,C
+LXI H,01
+LOOP: MOV A,M
+INX H
+CMP M
+JNC SKIP
+MOV B,M
+MOV M,A
+DCX H
+MOV M,B
+INX H
+SKIP: DCR D
+JNC LOOP
+DCR C
+JNC REPEAT
+HLT

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .cart {
+            margin: 20px 0;
+        }
+        .cart table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cart table, .cart th, .cart td {
+            border: 1px solid #ddd;
+        }
+        .cart th, .cart td {
+            padding: 10px;
+            text-align: left;
+        }
+        .cart th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .total h3 {
+            margin: 0;
+        }
+        .checkout {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .checkout button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Library Cart</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="catalog.html">Books</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="login.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Book 1</td>
+                        <td>Author 1</td>
+                        <td>1</td>
+                        <td>$10.00</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Book 2</td>
+                        <td>Author 2</td>
+                        <td>2</td>
+                        <td>$15.00</td>
+                        <td>$30.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="total">
+            <h3>Total: $40.00</h3>
+        </div>
+        <div class="checkout">
+            <button>Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

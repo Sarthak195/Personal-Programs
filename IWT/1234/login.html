@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+body {
+    font-family: 'Times New Roman', Georgia;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+
+header {
+    color: #d11241;
+    padding: 30px;
+    font-size: 75px;
+}
+
+label {
+    font-size: 35px;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: block;
+}
+
+input[type="submit"] {
+    background-color: #F0A04B;
+    color: #780C28;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+footer {
+    background: #F0A04B;
+    color: #780C28;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+<script>
+function validateForm(event) {
+    event.preventDefault();
+    var enrollment = document.getElementById("enrollment").value.trim();
+    var password = document.getElementById("password").value.trim();
+    var enrollmentError = document.getElementById("enrollmentError");
+    var passwordError = document.getElementById("passwordError");
+    
+    enrollmentError.innerHTML = "";
+    passwordError.innerHTML = "";
+    
+    var enrollmentPattern = /^[a-zA-Z0-9]+$/;
+    if (enrollment === "") {
+        enrollmentError.innerHTML = "Enrollment number is required!";
+        return false;
+    } else if (!enrollmentPattern.test(enrollment)) {
+        enrollmentError.innerHTML = "Only letters and numbers allowed!";
+        return false;
+    }
+    if (password === "") {
+        passwordError.innerHTML = "Password is required!";
+        return false;
+    } else if (password.length < 6) {
+        passwordError.innerHTML = "Password must be at least 6 characters!";
+        return false;
+    }
+    alert("Login Successful!");
+    return true;
+}
+</script>
+</head>
+<body>
+<header>LOGIN HERE</header>
+<center>
+<form onsubmit="return validateForm(event)">
+    <pre>
+    <label>Enrollment</label>
+    <input type="text" id="enrollment" placeholder="Enrollment No." required/>
+    <div id="enrollmentError" class="error"></div>
+    
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter here" required/>
+    <div id="passwordError" class="error"></div>
+    
+    <input type="submit" value="Login"/>
+    </pre>
+</form>
+</center>
+<footer>
+    &copy; <span>medicaps.ac.in</span>
+</footer>
+</body>
+</html>

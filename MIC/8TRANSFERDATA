@@ -1,0 +1,13 @@
+;Program to transfer block of data from 
+;one memory location to another 
+;Saniya Pawar/ EN23CS301921
+MVI C, 0AH
+LXI H, 2000
+LXI D, 2004
+BACK: MOV A,M
+STAX D
+INX H
+INX D
+DCR C
+JNZ BACK
+HLT

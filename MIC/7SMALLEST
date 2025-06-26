@@ -1,0 +1,15 @@
+;Program to find smallest number of Array
+;Sanskriti Laad/ EN23CS301926
+LXI H, 00H
+MOV B, M
+INX H
+MOV A,M
+DCR B
+LOOP: INX H
+CMP M
+JC AHEAD
+MOV A, M
+AHEAD: DCR B
+JZ LOOP
+STA 06H
+HLT

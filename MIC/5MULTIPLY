@@ -1,0 +1,17 @@
+;Program to Multiply two 8 bit numbers
+;Sarthak Jain/ EN23CS301931
+MVI D,00
+MVI A,00
+LXI H,4150
+MOV B,M
+INX H
+MOV C,M
+LOOP: ADD B
+JNC NEXT 
+INR D
+NEXT: DCR C
+JNZ LOOP
+STA 4155
+MOV A,D
+STA 4153
+HLT

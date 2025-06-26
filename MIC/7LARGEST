@@ -1,0 +1,15 @@
+;Program to find Largest number of Array
+;Sarthak Jain/ EN23CS301931
+LXI H, 00H
+MOV B, M
+INX H
+MOV A,M
+DCR B
+LOOP: INX H
+CMP M
+JNC AHEAD
+MOV A, M
+AHEAD: DCR B
+JNZ LOOP
+STA 08H
+HLT

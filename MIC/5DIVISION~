@@ -1,0 +1,14 @@
+;Program to divide two 8 bit numbers
+;Sarthak Jain/ EN23CS301931
+MVI A,09H
+MVI B,04H
+MVI C,00H
+LOOP: CMP B
+JC RES
+SUB B
+INR C
+JMP LOOP
+RES: STA 0000H
+MOV A,C
+STA 0001H
+HLT

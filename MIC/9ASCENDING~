@@ -1,0 +1,26 @@
+;Program to arrange data in ascending order
+;Sanskriti Laad/ EN23CS301926
+;ASCENDING ORDER
+LXI H, 00
+MOV C,M
+BACK: LXI H,00
+MOV D,M
+INX H
+MOV A,M
+LOOP: INX H
+MOV B,M
+CMP B
+JNC AHEAD
+DCX H
+MOV M,A
+MOV A,B
+JMP GO
+AHEAD: DCX H
+MOV M,B
+GO: INX H
+DCR D
+JNZ LOOP
+MOV M,A
+DCR C
+JNZ BACK
+HLT
