@@ -1,5 +1,5 @@
 // Program to demonstrate a generic method
-class Test {
+class Test1 {
     // Generic method
     public static <T> void generic(T obj) {
         System.out.println(obj);
