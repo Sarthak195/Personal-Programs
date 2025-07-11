@@ -5,7 +5,8 @@ public class Sum {
         System.out.println("Enter Values");
         int a=sc.nextInt();
         int b=sc.nextInt();
-        System.out.println("Sum is "+(a+b));
+        int sum=a+b;
+        System.out.println("Sum is "+sum);
 
     }
     
