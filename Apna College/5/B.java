@@ -3,10 +3,12 @@ public class B {
         int i=0,j=0;
         for(i=0;i<4;i++){
             for(j=0;j<5;j++){
-                System.out.print("*");
+                if (i==0||j==0||i==3||j==4) {
+                    System.out.print("*");  }
+                else{
+                    System.out.print(" ");  }
             }
-            System.out.println("");
+        System.out.println("");
         }
     }
-    
 }
