@@ -7,7 +7,7 @@
 */
 public class D {
     public static void main(String[] args) {
-        int i,j,k,l,m;
+        int i,j,k;
         for(i=0;i<6;i++){
             for(j=5;j>i;j--){
                 System.out.print(" ");
