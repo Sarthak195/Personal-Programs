@@ -1,0 +1,19 @@
+class Solution {
+    public int maxAdjacentDistance(int[] nums) {
+        int max=0,sub=0,pos=0;
+        for(int i=0;i<nums.length-1;i++){
+            int a=nums[i];
+            int b=nums[i+1];
+            sub=(a>b)?(a-b) :(b-a);
+            pos=sub>0?(sub):(-1*sub);
+            max=pos>max?(pos):max;
+        }
+            int a=nums[0];
+            int b=nums[nums.length-1];
+            sub=(a>b)?(a-b) :(b-a);
+            pos=sub>0?(sub):(-1*sub);
+            max=pos>max?(pos):max;
+        return max;
+    }
+}
+
