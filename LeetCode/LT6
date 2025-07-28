@@ -1,0 +1,26 @@
+//Incomplete code
+// Problem: ZigZag Conversion
+class Solution {
+    public String convert(String s, int numRows) {
+        char pol[][]= new char[numRows][s.length()] ;
+        int num=0;
+        for(int i=0;i<numRows;i++){
+            for(int j=0;j<s.length();j++){
+                if((j%(numRows+4)==0||((i+j)==(numRows-1)))&&num<s.length()){
+                    pol[i][j]=s.charAt(num);
+                    num++;
+                    
+                }
+            }
+        }
+        StringBuilder str= new StringBuilder();
+        for(int i=0;i<numRows;i++){
+            for(int j=0;j<s.length();j++){
+                if(pol[i][j]!=0){
+                    str.append (pol[i][j]);
+                }
+            }
+        }
+        return str.toString();
+    }
+}
