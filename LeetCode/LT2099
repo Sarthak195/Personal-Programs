@@ -1,0 +1,23 @@
+//Poora Code galat hai
+class Solution {
+    public int[] maxSubsequence(int[] nums, int k) {
+        int max=-100000,a=0;
+        
+        for(int i=0;i<=nums.length-k;i++){
+            int sum=0;
+            for(int j=0;j<k;j++){
+                sum+=nums[i+j];
+            }
+            if(sum>max) {
+                max=sum;
+                a=i;
+                }
+        }
+        int[] out=new int[k];
+        for(int i=0;i<k;i++){
+            out[i]=nums[a+i];
+
+        }
+        return out;
+    }
+}
