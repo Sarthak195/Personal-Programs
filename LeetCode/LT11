@@ -1,0 +1,19 @@
+//Bohot haga hai
+//Poora code Galat hai
+//Koi bhi test case pass nahi ho raha hai
+//LeetCode Problem: Container With Most Water
+//Please question poora padho aur code ko sahi karo
+class Solution {
+    public int maxArea(int[] height) {
+        int area=0,max=0;
+        for(int i=0;i<height.length;i++){
+            for(int j=i+1;j<height.length;j++){
+                area=(j-i)*(height[i]>=height[j]?height[j]:height[i]);
+                max=area>max?area:max;
+
+            }
+        }
+        return max;
+        
+    }
+}
