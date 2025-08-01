@@ -1,0 +1,24 @@
+//Time Limit Exceeded
+//Completely wrong approach
+class Solution {
+    public int[] canSeePersonsCount(int[] heights) {
+        int n=heights.length;
+        int[] res=new int[n];
+        int count,tall;
+        for(int i=0;i<n;i++){
+            count=0;
+            tall=0;
+            for(int j=i+1;j<n;j++) {
+                if(heights[j]>tall) {
+                    count++;
+                    tall=heights[j];
+                    }
+                if(heights[j]>=heights[i]) {
+                    break;
+                    }
+            }
+            res[i]=count;
+        }
+        return res;
+    }
+}
