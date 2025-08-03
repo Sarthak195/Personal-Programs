@@ -1,0 +1,19 @@
+//First attempt
+//Runtime: 0 ms, faster than 100.00% of Java online submissions for Q1550
+class Solution {
+    public boolean threeConsecutiveOdds(int[] arr) {
+        int cons=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+                cons++;
+                if(cons==3){
+                    return true;
+                    }
+                }
+            else{
+                cons=0;
+                }
+            }
+        return false;
+        }
+    }
