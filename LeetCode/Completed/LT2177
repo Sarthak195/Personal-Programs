@@ -1,0 +1,14 @@
+//First submission
+//Had bugs
+class Solution {
+    public long[] sumOfThree(long num) {
+        long[] empty={};
+        if(num%3!=0){
+            return empty;
+            } else{
+            long x=num/3;
+            long[] ret= {x-1,x,x+1};
+            return ret;
+            }
+        }
+    }
