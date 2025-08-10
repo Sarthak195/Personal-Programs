@@ -1,0 +1,13 @@
+class Solution {
+    public int maximumUniqueSubarray(int[] nums) {
+        Arrays.sort(nums);
+        int sum=0;
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[i]!=nums[i+1]){
+                sum+=nums[i];
+                }
+            }
+        sum+=nums[nums.length-1];
+        return sum;
+        }
+    }
