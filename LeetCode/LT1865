@@ -1,0 +1,39 @@
+//Kuch toh galat hai par pata nahi
+// LeetCode Problem: 1865. Finding Pairs With a Certain Sum
+// Difficulty: Medium
+class FindSumPairs {
+    int[] nums1;
+    int[] nums2;
+    int index,val,tot,num=0;
+    public FindSumPairs(int[] nums1, int[] nums2) {
+        for(int i=0;i<nums1.length;i++){
+            for(int j=0;j<nums2.length;j++){
+                if(nums1[i]==nums2[j]){
+                    return nums;
+                }
+            }
+        }
+    }
+    
+    public void add(int index, int val) {
+        nums2[index]+=val;
+    }
+    
+    public int count(int tot) {
+        for(int i=0;i<nums1.length;i++){
+            for(int j=0;j<nums2.length;j++){
+                if(nums1[i]+nums2[j]==tot){
+                    num++;
+                }
+            }
+        }
+    return num;  
+    }
+}
+
+/**
+ * Your FindSumPairs object will be instantiated and called as such:
+ * FindSumPairs obj = new FindSumPairs(nums1, nums2);
+ * obj.add(index,val);
+ * int param_2 = obj.count(tot);
+ */
