@@ -1,0 +1,20 @@
+class Solution {
+    public int findSpecialInteger(int[] arr) {
+        int q=arr.length/4;
+        if(arr.length==1){
+            return arr[0];
+            }
+        int a=0;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]==arr[i-1]){
+                a++;
+                if(a>=q){
+                    return arr[i];
+                    }
+                }else{
+                    a=0;
+                    }
+                }
+            return 0;
+        }
+    }
