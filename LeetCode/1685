@@ -1,0 +1,15 @@
+//Time limit exceeded
+class Solution {
+    public int[] getSumAbsoluteDifferences(int[] nums) {
+        int n=nums.length,a=0;
+        int[] res=new int[n];
+        for(int i=0;i<n;i++){
+            a=0;
+            for(int j=0;j<n;j++){
+                a+=Math.abs(nums[i]-nums[j]);
+            }
+            res[i]=a;
+        } 
+        return res;
+    }
+}
