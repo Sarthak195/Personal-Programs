@@ -1,0 +1,14 @@
+class Solution {
+    public int minOperations(String[] logs) {
+        int res=0;
+        for(String j:logs){
+            if(j.contains("../")){
+                if(res>0){res--;}
+            }else if(j.contains("./")){
+            }else{
+                res++;
+                }
+            }
+            return res;
+        }
+    }
