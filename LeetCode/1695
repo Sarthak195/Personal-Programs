@@ -9,6 +9,5 @@ class Solution {
             }
         sum+=nums[nums.length-1];
         return sum;
-        dfthfth
         }
     }
