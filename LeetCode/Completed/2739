@@ -1,0 +1,20 @@
+class Solution {
+    public int distanceTraveled(int mainTank, int additionalTank) {
+        int dis=0;
+        while(mainTank>0){
+            if(mainTank<5){
+                mainTank--;
+                dis+=10;
+            }
+            if(mainTank>=5){
+                dis+=50;
+                mainTank-=5;
+                if(additionalTank>0){
+                    mainTank++;
+                    additionalTank--;
+                }
+            }
+        }
+        return dis;
+    }
+}
