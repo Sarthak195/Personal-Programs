@@ -1,3 +1,2 @@
-rows = 5
-for i in range(1,rows,1):
+for i in range(1,8,1):
     print('*' * i)
