@@ -1,0 +1,18 @@
+class Solution {
+    public boolean sumOfNumberAndReverse(int num) {
+        if(num==0)return true;
+        int j=0,rev=0;
+        for(int i=num/2;i<=num;i++){
+            j=i;
+            rev=0;
+            while(j>0){
+                rev=rev*10+(j%10);
+                j/=10;
+            }
+            if(i+rev==num){
+                return true;
+            }
+        }
+        return false;
+    }
+}
