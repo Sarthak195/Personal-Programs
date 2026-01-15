@@ -1,0 +1,10 @@
+class Solution {
+    public int minStartValue(int[] nums) {
+        int sum=0,min=0;
+        for(int b:nums){
+            sum+=b;
+            min=min>sum?sum:min;
+        }
+        return -min+1;
+    }
+}
