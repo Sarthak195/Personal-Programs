@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class A1373B {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            String s = sc.next();   // READ STRING
+
+            int zero = 0, one = 0;
+            for (char c : s.toCharArray()) {
+                if (c == '0') zero++;
+                else one++;
+            }
+
+            int moves = Math.min(zero, one);
+
+            if (moves % 2 == 1)
+                System.out.println("DA");
+            else
+                System.out.println("NET");
+        }
+    }
+}

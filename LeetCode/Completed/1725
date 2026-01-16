@@ -1,0 +1,15 @@
+class Solution {
+    public int countGoodRectangles(int[][] rect) {
+        int ans=0,sq=0,max=0;
+        for(int i=0;i<rect.length;i++){
+            sq=Math.min(rect[i][0],rect[i][1]);
+            if(max==sq){
+                ans++;
+            }else if(max<sq){
+                ans=1;
+                max=sq;
+            }
+        }
+return ans;
+    }
+}
