@@ -1,0 +1,32 @@
+class Solution {
+
+    static boolean isPrime(int n) {
+        if (n <= 1) return false;
+        if (n <= 3) return true;
+        if (n % 2 == 0 || n % 3 == 0) return false;
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public boolean completePrime(int num) {
+        int div = 1;
+        while (div <= num) div *= 10;
+        div /= 10;
+
+        while (div > 0) {
+            int prefix = num / div;
+            if (!isPrime(prefix)) return false;
+            div /= 10;
+        }
+        int mod = 10;
+        while (mod <= num * 10) {
+            int suffix = num % mod;
+            if (!isPrime(suffix)) return false;
+            mod *= 10;
+        }
+        return true;
+    }
+}
