@@ -1,0 +1,14 @@
+class Solution {
+    public int numWaterBottles(int bot, int exc) {
+        int daru = bot;     
+        int empty = bot;  
+
+        while (empty >= exc) {
+            int newBottles = empty / exc;
+            daru += newBottles;
+            empty = newBottles + (empty % exc);
+        }
+
+        return daru;
+    }
+}
