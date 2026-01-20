@@ -16,5 +16,4 @@ public class A977A {
         sc.close();
         
     }
-    
 }
