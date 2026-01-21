@@ -9,5 +9,6 @@ public class Conditions {
     } else{
         System.out.println("Child");
     }
+    sc.close();
     }
 }
