@@ -6,6 +6,7 @@
 @attribute DOB date dd-mm-yyyy
 @attribute city string
 
+
 @data 
 1,a,1,HR,12-02-1984,indore
 2,b,2,MANAGEMENT,13-02-1984,indore
