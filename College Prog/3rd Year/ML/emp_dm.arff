@@ -1,0 +1,13 @@
+@relation em 
+@attribute id numeric
+@attribute f_name string
+@attribute contact_num numeric
+@attribute dept {HR,MANAGEMENT,MAINTENANCE}
+@attribute DOB date dd-mm-yyyy
+@attribute city string
+
+@data 
+1,a,1,HR,12-02-1984,indore
+2,b,2,MANAGEMENT,13-02-1984,indore
+3,c,3,HR,14-02-1984,indore
+4,d,4,MAINTENANCE,15-02-1984,indore
