@@ -1,0 +1,24 @@
+class Solution {
+    public int numSpecial(int[][] mat) {
+        int res=0;
+
+        for(int i=0;i<mat.length;i++){
+            int cnt=0,ind=-1;
+
+            for(int j=0;j<mat[0].length;j++){
+                if(mat[i][j]==1){
+                    cnt++;
+                    ind=j;
+                }
+            }
+            if(cnt==1){
+                int colCnt=0;
+                for(int k=0;k<mat.length;k++){
+                    if(mat[k][ind]==1) colCnt++;
+                }
+                if(colCnt==1) res++;
+            }
+        }
+        return res;
+    }
+}
