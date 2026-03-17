@@ -1,0 +1,8 @@
+class Solution {
+    public int minElements(int[] nums, int limit, int goal) {
+        long sum=0;
+        for(int a:nums) sum+=a;
+        long req=Math.abs((long)goal-sum);
+        return (int)((req+limit-1)/limit);
+    }
+}
