@@ -1,0 +1,21 @@
+class Solution {
+    public int minDeletions(String s) {
+        int[] cnt=new int[26];
+        for(int i=0;i<s.length();i++){
+            cnt[s.charAt(i)-'a']++;
+            }
+        Arrays.sort(cnt);
+        int del=0;
+        int prev=Integer.MAX_VALUE;
+        for(int i=25;i>=0;i--){
+            if(cnt[i]==0) break;
+            if(cnt[i]>=prev){
+                int newVal=Math.max(0,prev-1);
+                del+=cnt[i]-newVal;
+                cnt[i]=newVal;
+            }
+            prev=cnt[i];
+        }
+        return del;
+    }
+}
